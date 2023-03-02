@@ -15,10 +15,11 @@ body {
 
 section{
     position: absolute;
-    width: 80vh;
+    width: 80vw;
     height: 70vh;
     border-radius: 30px;
     padding: 45px;
+    z-index: 5;
 }
 
 /* Primera pantalla */
@@ -29,6 +30,7 @@ section{
     align-items: center;
     text-align: center;
     animation: 2.5s animIntro forwards;
+    opacity: 0;
 }
 
 @keyframes animIntro{
@@ -111,3 +113,172 @@ section{
     1%{opacity: 1;}
     100%{opacity: 1;}
 }
+
+/* Segunda Pantalla */
+.info{
+    background-color: #016542;
+    z-index: 0;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Montserrat';
+    box-shadow: 0 0 100px rgb(191, 191, 191);
+}
+
+.info header{
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    animation: 1s header forwards;
+}
+
+@keyframes header{
+    0%{
+        opacity: 0;
+        bottom: 20px;
+    }
+    100%{
+        opacity: 1;
+        bottom: 0;
+    }
+}
+
+.info header a{
+    text-decoration: none;
+    color: #fff;
+    margin-right: 30px;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: .3s ;
+}
+
+.info header a:hover{
+    background-color: #34b78b;
+}
+
+.info header a i{
+    font-size: 30px;
+}
+
+.info h1{
+    font-family: "Parisienne";
+    font-size: 5rem;
+}
+
+.info h3{
+    position: relative;
+    font-family: "Allura";
+    top: 45px;
+    left: 90px;
+    font-size: 35px;
+}
+
+.info p{
+    max-width: 350px;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.info .items{
+    position: absolute;
+    display: flex;
+    background-color: #fff;
+    border-radius: 0 50px 0 0;
+    max-width: 600px;
+    width: 100%;
+    justify-content: space-around;
+    padding-top: 20px;
+    left: 0;
+    bottom: -50%;
+    animation: .5s animItems forwards;
+    animation-delay: .5s;
+}
+
+@keyframes animItems{
+    0%{
+        opacity: 0;
+        bottom: -50%;
+    }
+    100%{
+        opacity: 1;
+        bottom: 0;
+    }
+}
+
+.items .opcion{
+    position: relative;
+}
+
+.items .opcion:hover img{
+    scale: 1.1;
+}
+
+.items .opcion img{
+    position: relative;
+    height: 180px;
+    z-index: 10 !important;
+    padding: 0 20px;
+    transition: .5s;
+}
+
+.items .opcion .base{
+    position: absolute;
+    background: #016542;
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+}
+
+.info .mitad-marron{
+    position: absolute;
+    background: #eacba0;
+    width: 350px;
+    top: 0;
+    height: 100%;
+    right: 0;
+}
+
+.info .foto-principal{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 280px;
+    max-width: 300px;
+    transition: .5s;
+    animation: .5s animFotoPrincipal forwards;
+}
+
+@keyframes animFotoPrincipal{
+    0%{
+        opacity: 0;
+        right: -50;
+    }
+    100%{
+        opacity: 1;
+        right: 180px;
+    }
+}
+
+.info .foto-principal:hover{
+    scale: 1.1;
+}
+
+.texto{
+    position: relative;
+    animation: .5s texto forwards linear;
+}
+
+@keyframes texto{
+    0%{
+        opacity: 0;
+        left: -50%;
+    }
+    100%{
+        opacity: 1;
+        left: 0%;
+    }
+}
+
