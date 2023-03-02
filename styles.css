@@ -1,3 +1,113 @@
-h1{
-    color: green !important;;
+/* Importamos las fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:wght@200;300;400&family=Parisienne&family=Titillium+Web:wght@200;300;400;600;700&display=swap');
+
+*{
+    margin: 0;
+}
+
+body {
+    background: linear-gradient(to right, #148657, #24b78b);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section{
+    position: absolute;
+    width: 80vh;
+    height: 70vh;
+    border-radius: 30px;
+    padding: 45px;
+}
+
+/* Primera pantalla */
+.intro{
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: 2.5s animIntro forwards;
+}
+
+@keyframes animIntro{
+    0%{
+        visibility: visible;
+    }
+    1%{
+        visibility: visible;
+    }
+    100%{
+        visibility: hidden;
+    }
+}
+
+.intro .contenido{
+    position: relative;
+    max-width: 300px;
+    width: 100%;
+    animation: .5s aparecer forwards;
+}
+
+@keyframes aparecer{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+.intro .barra{
+    height: 7px;
+    background: #ddd;
+    border-radius: 4px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.intro .barra .progreso{
+    height: 7px;
+    width: 0%;
+    background: #34b734;
+    animation: 1.6s avanzar forwards;
+    animation-delay: .3s;
+}
+
+@keyframes avanzar{
+    0%{width: 0;}
+    40%{width: 50%;}
+    60%{width: 50%;}
+    100%{width: 100%;}
+}
+
+.txt{
+    font-family: "Montserrat";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: -20px;
+    font-size: 22px;
+    color: #666;
+}
+
+.texto1{
+    animation: .8s animTexto1 forwards;
+    animation-delay: .3s;
+}
+
+@keyframes animTexto1{
+    0%{opacity: 0;}
+    1%{opacity: 1;}
+    99%{opacity: 1;}
+    100%{opacity: 0;}
+}
+
+.texto2{
+    opacity: 0;
+    animation: .8s animTexto2 forwards;
+    animation-delay: 1.1s;
+}
+
+@keyframes animTexto2{
+    0%{opacity: 0;}
+    1%{opacity: 1;}
+    100%{opacity: 1;}
 }
